@@ -1,0 +1,126 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+---
+
+<MainLayout title="Digitalcleanupday">
+  <!-- Hero-sektion -->
+  <div class="relative overflow-hidden mt-0">
+    <div class="relative w-full ">
+      <div class="absolute inset-0 opacity-50"></div>
+      <div class="min-h-screen relative z-20 flex flex-col items-center justify-center text-center text-white px-6">
+        <img src="src/assets/images/paperboy_white.svg" alt="paperboy" class="h-46 sm:h-40 md:h-46 w-auto mx-auto transition transform  duration-300">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
+          Digital Oprydningsdag 15.Marts 2025 - ryd op i dit digitale skrald!
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl mb-4 md:mb-6 max-w-3xl mx-auto">
+          Slut dig til os og reducer CO₂-udledningen fra digitalt skrald. Et skridt ad gangen mod en renere fremtid.
+        </p>
+        <Button class="text-white py-3 px-10 rounded-full text-l shadow-lg transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+          Save the date
+        </Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tekstsektioner -->
+  <div class="relative z-20 -mt-4">
+    <section class="relative">
+      <div class="min-h-screen flex items-center justify-center px-6 py-12">
+        <div class="max-w-4xl mx-auto p-8 text-gray-200 rounded-xl shadow-lg transform transition duration-700 opacity-0 scroll-animation">
+          <div class="grid grid-cols-1 gap-6">
+            <div class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-semibold text-center text-white">Hvad er digitalt skrald?</h2>
+              <p class="leading-relaxed text-base sm:text-lg">
+                Digitalt skrald er unødvendige data, der belaster vores digitale enheder og internettet. Det inkluderer gamle e-mails, duplikatfiler, ubrugte apps, forældede backups og inaktive konti. Disse data kræver energi til lagring og behandling, hvilket bidrager til CO₂-udledning og øger vores samlede miljøaftryk.
+              </p>
+              <p class="leading-relaxed text-base sm:text-lg">
+                Når vi gemmer store mængder data, kræver det plads på servere, som konstant skal være tændt og kølet ned for at fungere optimalt. Dette betyder et løbende energiforbrug, der ofte stammer fra fossile brændstoffer. Selvom vi ikke altid tænker over det, har vores digitale vaner en reel påvirkning på klimaet.
+              </p>
+              <p class="leading-relaxed text-base sm:text-lg">
+                Ved at rydde op i vores digitale rod kan vi reducere vores digitale fodaftryk og spare ressourcer. En systematisk oprydning hjælper ikke kun miljøet, men kan også forbedre vores enheders ydeevne, frigøre lagerplads og gøre det lettere at finde de filer og beskeder, vi faktisk har brug for. Små handlinger, såsom at slette gamle filer eller afmelde sig unødvendige nyhedsbreve, kan gøre en stor forskel i det lange løb.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Data Points Sektion -->
+  <div class="min-h-screen flex items-center justify-center px-6 py-8">
+    <!-- Skift til et responsivt grid: 1 kolonne på small, 2 på medium og 3 på large -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+      <div class="p-6 shadow-xl rounded-xl border-opacity-50 transform transition duration-700 opacity-0 scroll-animation">
+        <div class="w-full mx-auto mt-8 px-4">
+          <img src="src/assets/images/Bitcoin--Streamline-Font-Awesome.svg" alt="Bitcoin" class="h-24 w-auto mx-auto transition transform hover:scale-125 duration-300">
+        </div>
+        <h2 class="text-xl sm:text-2xl font-semibold text-white mt-8 mb-4 text-center">
+          Det kræver mere energi at mine Bitcoin, end hele New Zealand forbruger på et år!
+        </h2>
+      </div>
+
+      <div class="p-6 shadow-xl rounded-xl border-opacity-50 transform transition duration-700 opacity-0 scroll-animation">
+        <div class="w-full mx-auto mt-8 px-4">
+          <img src="src/assets/images/Send-Email-Fly--Streamline-Ultimate.svg" alt="Email" class="h-24 w-auto mx-auto transition transform hover:scale-125 duration-300">
+        </div>
+        <h2 class="text-xl sm:text-2xl font-semibold text-white mt-8 mb-4 text-center">
+          320 milliarder e-mails sendes hver dag, og 62 billioner spam-e-mails hvert år = 20 millioner tons CO₂!
+        </h2>
+      </div>
+
+      <div class="p-6 shadow-xl rounded-xl border-opacity-50 transform transition duration-700 opacity-0 scroll-animation">
+        <div class="w-full mx-auto mt-8 px-4">
+          <img src="src/assets/images/Google--Streamline-Unicons-Thinline.svg" alt="Google" class="h-24 w-auto mx-auto transition transform hover:scale-125 duration-300">
+        </div>
+        <h2 class="text-xl sm:text-2xl font-semibold text-white mt-8 mb-4 text-center">
+          91% af websider får ingen trafik fra Google.
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formular Sektion -->
+  <div class="min-h-screen flex items-center justify-center px-6 py-8 text-black">
+    <div class="max-w-xl w-full p-8 shadow-lg rounded-lg transform transition duration-700 opacity-0 scroll-animation">
+      <section id="køb-her" class="max-w-lg mx-auto mt-32 p-6 rounded-lg shadow-xl ">
+        <h2 class="text-3xl sm:text-4xl font-bold pb-6 text-center text-white">Registrer dit bidrag</h2>
+        <form class="space-y-4">
+          <input type="text" placeholder="Navn" class="p-3 w-full border rounded-lg"/>
+          <input type="text" placeholder="Adresse" class="p-3 w-full border rounded-lg"/>
+          <input type="email" placeholder="E-mail" class="p-3 w-full border rounded-lg"/>
+          <input type="text" placeholder="By" class="p-3 w-full border rounded-lg"/>
+          <input type="text" placeholder="Postnummer" class="p-3 w-full border rounded-lg"/>
+          <input type="tel" placeholder="Telefon" class="p-3 w-full border rounded-lg"/>
+          <input type="text" placeholder="Kr." class="p-3 w-full border rounded-lg"/>
+          <button type="submit" class="bg-sky-700 text-white py-3 px-6 rounded-full hover:bg-sky-900 transition w-full sm:w-auto cursor-pointer">
+            Registrer
+          </button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scroll-animation script forbliver det samme -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.scroll-animation');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.add('opacity-100', 'translate-x-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3
+      });
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</MainLayout>
+

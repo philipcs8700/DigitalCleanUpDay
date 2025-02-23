@@ -1,0 +1,78 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import skraldespand from "../assets/images/Trash--Streamline-Atlas.svg";
+
+const today = new Date();
+const targetDate = new Date('2025-03-15');
+const isAfterTargetDate = today >= targetDate;  // Tjek om vi er efter den 15. marts 2025
+
+---
+
+
+<MainLayout title="Digital Cleanup Day" class="">
+    <!-- Hero Section -->
+      <!-- Hero Section -->
+  <div class="relative w-full h-[80vh]">
+    <!-- Animeret linje der går rundt om tekstfelterne -->
+    <svg class="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 w-full h-full" viewBox="0 0 200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 0
+                 C 120 100, 80 200, 100 300 
+                 S 120 500, 100 600
+                 S 80 700, 100 750
+                 C 80 780, 120 780, 100 800" 
+              stroke="#2D3748" stroke-width="3" fill="transparent" stroke-dasharray="2000" stroke-dashoffset="2000">
+            <animate attributeName="stroke-dashoffset" from="2000" to="0" dur="3s" fill="freeze"/>
+        </path>
+    </svg>
+
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="relative z-20 flex flex-col items-center justify-center text-center text-white px-6">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Digital Oprydningsdag - 15. marts 2025
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+            {isAfterTargetDate 
+                ? "Tillykke med at have bidraget! Tak for din indsats i oprydningen." 
+                : "Gør en forskel! Inviter venner og familie til at deltage i oprydningen."}
+        </p>
+        
+        <!-- Dynamisk CTA -->
+        <Button class="bg-pink-600 text-white py-3 px-8 rounded-full text-lg shadow-lg hover:bg-pink-700 transition duration-300">
+            {isAfterTargetDate 
+                ? "Registrer Dit Bidrag" 
+                : "Save the Date"}
+        </Button>
+    </div>
+  </div>
+        <div class="min-h-screen flex items-center justify-center px-6 py-16">
+        <div class="relative max-w-xl p-6 shadow-md">
+            <h2 class="text-3xl font-semibold">Hvad er digitalt skrald?</h2>
+            <p class="mt-2 text-lg" style="color: #E8F4FE;">
+                Digitalt skrald er unødvendige data, der belaster vores digitale enheder og internettet...
+            </p>
+        </div>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center px-6 py-16">
+        <div class="relative max-w-xl p-6 shadow-md">
+            <h2 class="text-3xl font-semibold">Hvordan rydder vi op?</h2>
+            <p class="mt-2 text-lg" style="color: #E8F4FE;">
+                Rydning af digitalt skrald hjælper med at reducere energiforbrug og CO₂-udledning.
+            </p>
+        </div>
+    </div>
+
+    <!-- Skraldespand i bunden -->
+    <div class="relative flex justify-center mb-8">
+        <Image src={skraldespand} alt="Skraldespand" class="w-16 h-16 absolute bottom-0"/>
+    </div>
+    </div>
+
+
+    
+</MainLayout>
